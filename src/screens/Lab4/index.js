@@ -5,7 +5,7 @@ import ListCourse from '../../components/list';
 
 const Lab4 = () => {
     return (
-        <View>
+        <View style={{flex:1}}>
             <ListCourse />
         </View>
     );

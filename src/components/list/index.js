@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, FlastList, Image} from 'react-native';
+import {Text, View, FlatList, Image} from 'react-native';
 import {styles} from './styles';
 
 const Data =[
@@ -44,16 +44,16 @@ const Item = ({title, imageSource}) => {
     );
 };
 
-const renderItem = ({item}) => {
-    <Item imageSource={item.imageSource} title={item.title}></Item>
+const RenderItem = ({item}) => {
+  return (<Item imageSource={item.imageSource} title={item.title}></Item>)
 };
 
 const ListCourse = () => {
     return(
-        <FlastList
+        <FlatList
             data={Data}
-            renderItem={renderItem}
-            keyExtrator={Item => Item.id} />
+            renderItem={({item}) => <Item imageSource={item.imageSource} title={item.title}></Item>}
+            keyExtrator={(item) =>  item.id} />
     );
 };
 
