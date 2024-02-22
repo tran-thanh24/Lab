@@ -26,10 +26,10 @@ export const styles = StyleSheet.create({
         borderRadius: 4,
         paddingHorizontal: 16,
         paddingVertical: 12,
-        marginHorizontal: 8,
+        marginHorizontal: 4,
         backgroundColor: 'blue',
-        marginBottom: 12,
-        marginTop: 12,
+        marginBottom: 8,
+        marginTop: 8,
     },
     name: {
         textAlign: 'left',
@@ -47,7 +47,7 @@ export const styles = StyleSheet.create({
         backgroundColor: 'blue',
         paddingVertical: 12,
         paddingHorizontal: 16,
-        marginHorizontal: 8,
+        marginHorizontal: 4,
         borderRadius: 8,
     },
     buttonText: {

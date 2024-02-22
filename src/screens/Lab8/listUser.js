@@ -1,4 +1,4 @@
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Modal, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { styles } from './styles';
 import React, { useState } from "react";
 
@@ -8,7 +8,7 @@ const ListUser = ({ navigation }) => {
     const [selecttedUser, setSelectedUser] = useState(undefined);
 
     const getAPI = async () => {
-        const url = 'http://10.0.2.2:3000/users';
+        const url = 'http://192.168.1.7:3000/users';
         let result = await fetch(url);
         result = await result.json();
         if (result) {
@@ -17,7 +17,7 @@ const ListUser = ({ navigation }) => {
     };
 
     const handleDelete = async id => {
-        const url = 'http://10.0.2.2:3000/users';
+        const url = 'http://192.168.1.7:3000/users';
         let result = await fetch(`${url}/${id}`, {
             method: 'Delete',
         });
@@ -28,7 +28,7 @@ const ListUser = ({ navigation }) => {
     };
 
     const handleUpdate = data => {
-        console.log("update")
+        console.log("update");
     };
 
     React.useEffect(() => {
@@ -41,7 +41,7 @@ const ListUser = ({ navigation }) => {
     return (
         <ScrollView>
             <TouchableOpacity style={styles.buttonNew} onPress={() => navigation('AddUser')}>
-                <Text style={styles.buttonNew}> Add New </Text>
+                <Text style={styles.buttonText}> Add New </Text>
             </TouchableOpacity>
 
             {
@@ -68,6 +68,9 @@ const ListUser = ({ navigation }) => {
 
                 )) : null
             }
+            <Modal visible = {openDialog} transparent={true}>
+
+            </Modal>
         </ScrollView>
     );
 };
