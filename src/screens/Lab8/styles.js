@@ -55,4 +55,34 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
     },
+    //style model
+    modelContent: {
+        backgroundColor: 'white',
+        padding: 16,
+        marginTop: 100,
+        borderRadius: 8,
+    },
+    input: {
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1,
+        borderRadius: 4,
+        paddingHorizontal: 8,
+        marginBottom: 16,
+    },
+    buttonGroup: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    button: {
+        backgroundColor: 'blue',
+        padding: 8,
+        borderRadius: 4,
+        marginLeft: 8,
+    },
+    buttonText: {
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
+    },
 });
